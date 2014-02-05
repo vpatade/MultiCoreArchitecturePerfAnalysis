@@ -1,0 +1,13 @@
+These fiels are Mandelbot using threads but dividing the width instead of height.
+
+When you divide on width, the speed up is increasing all the time which is not the case when we divide on height. Here all the threads take same
+amout of time to execute( to converge or to abort and return)
+
+Steps to execute
+1)Compile mandelbrot.cpp  mandelbrot.cpp -lpthread -stdc++
+2)Run- ./mandelbrot
+
+program will run three times using serial approach and will create nmandelbrot-serial.ppm file. The it will run for three times for 1,2,3.....8 
+threads and will create mandelbrot-one-thread.ppm, mandelbrot-two-thread.ppm................... mandelbrot-eight-thread.ppm files.
+
+Will give detailed output and will report the speedup using 1,2,3...8 threads over serial approach

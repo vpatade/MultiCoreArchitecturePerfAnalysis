@@ -1,0 +1,20 @@
+Steps to execute
+1)Compile
+2)Run- ./nqueen <APPROACH> <N> [D] [T]
+        
+        APPROACH = 0 => Serial
+	APPROACH = 1 => Threads
+	APPROACH = 2 => Threads with Work Pool
+	N = Number of queens
+	D = Recursion depth for Threads and Threads with Work approach
+	T = Number of worker Threads. Default will be 2.
+
+When Approach = 0
+            D and T are not needed and hence will be ignored
+When Approach = 1
+        D is needed T is not needed and hence will be ignored
+When Approach = 2
+        D and T both are needed if not specified, default configuration will be used
+         Default Configuration: 
+              D = -1
+              T = 2

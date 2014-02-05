@@ -1,0 +1,15 @@
+There are two files MatrixMultiplyThreads.c  and MatrixMultiplyColumnMajor.c. 
+First program is using threads and second one is using threads with more optimized approach for better performance.
+Compile both the files with -lpthread  option. 
+
+Executing the files have following format
+
+     MatrixMultiplyThreads.c [D] [R]    OR  ./MatrixMultiplyColumnMajor [DIMENSION] [R]
+     
+      D = Dimension of the Matrix. So mantrix will be D*D matrix
+      R = No of Runs. No of times we have to run the loop.
+   
+      if we don't specify any thing, it will take D=1024 and R = 2
+
+
+Both the programs will run for 1,2,3,.....8 threads one after another giving detailed output for each no of threads. 

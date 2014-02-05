@@ -1,0 +1,8 @@
+Steps to execute the Program-
+1)make clean
+2)make
+3) Run- ./mandelbrot 
+
+mandelbrot_ispc.ppm and mandelbrot_serial.ppm two image files will be created.
+
+Change the MakeFile to change Target Width.

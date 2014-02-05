@@ -1,0 +1,23 @@
+ash-4.1$ ./mandelbrot
+[mandelbrot ispc+tasks]:        [12.103] million cycles
+Wrote image file mandelbrot-ispc.ppm
+[mandelbrot serial]:            [358.523] millon cycles
+Wrote image file mandelbrot-serial.ppm
+                                (29.62x speedup from ISPC)
+bash-4.1$ cd ..
+bash-4.1$ cd mandelbrot_ispc/
+bash-4.1$ make
+/bin/mkdir -p objs/
+g++ mandelbrot.cpp -Iobjs/ -O2 -m64 -c -o objs/mandelbrot.o
+g++ mandelbrot_serial.cpp -Iobjs/ -O2 -m64 -c -o objs/mandelbrot_serial.o
+g++ ../tasksys.cpp -Iobjs/ -O2 -m64 -c -o objs/tasksys.o
+g++ -Iobjs/ -O2 -m64 -o mandelbrot objs/mandelbrot.o objs/mandelbrot_serial.o objs/tasksys.o objs/mandelbrot_ispc.o objs/mandelbrot_ispc_sse2.o objs/mandelbrot_ispc_sse4.o objs/mandelbrot_ispc_avx.o -lm -lpthread -lstdc++
+bash-4.1$ ./mandelbrot
+[mandelbrot ispc]:              [57.842] million cycles
+Wrote image file mandelbrot-ispc.ppm
+[mandelbrot serial]:            [358.484] millon cycles
+Wrote image file mandelbrot-serial.ppm
+                                (6.20x speedup from ISPC)
+bash-4.1$
+
+ 
